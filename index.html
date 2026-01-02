@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+   
+    <title>js</title>
+    
+    
+    </head>
+<body>
+ 
+<!--<script>
+    let nums = [45, 12, 78, 34, 90, 23];
+    let max = nums[0];
+    let secondMax = nums[0];
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] > max) {
+    secondMax = max;
+    max = nums[i];
+} else if (nums[i] > secondMax && nums[i] !== max) {
+    secondMax = nums[i];
+}
+
+    }
+
+    document.write(secondMax);
+
+</script>
+
+<script>
+    let words = ["apple", "sky", "orange", "rhythm", "cat", "elephant", "moon"];
+    let wordsVowel = 0;
+    for (let i = 0; i< words.length; i++){
+        if (words[i].includes ("a") || words[i].includes ("e") || words[i].includes ("i") || words[i].includes ("o") || words[i].includes ("u") && words[i].length > 3){
+            wordsVowel++
+        }
+    }
+    document.write(wordsVowel);
+</script>
+
+<script>
+    let nums = [2, 5, 10, 13, 8, 21, 30];
+    let result = [];
+
+    for (let i = 0; i < nums.length; i++) {
+
+        // If number is even → add "even"
+        if (nums[i] % 2 === 0) {
+            result.push("even");
+        }
+
+        // If number is odd AND greater than 10 → add "odd"
+        else if (nums[i] % 2 !== 0 && nums[i] > 10) {
+            result.push("odd");
+        }
+
+        // If number is odd AND <= 10 → ignore (do nothing)
+    }
+
+    document.write(result);
+</script>
+
+
+<script>
+    let nums = [3, 12, 7, 25, 40, 9, 18, 33];
+    let Result = [];
+    for (let i = 0; i < nums.length; i++){
+        if (nums[i] % 2 === 0){
+            Result.push ("E")
+        }
+        else if ( nums[i] % 2 !== 0 && nums[i] > 20){
+              Result.push ("O")
+        }
+    }
+
+    document.write(Result);
+</script>
+
+<script>
+    let words = ["hi", "sunshine", "cat", "beautiful", "sky", "mountain", "pen"];
+    let Result = [ ];
+    for (let i = 0; i < words.length; i++){
+        if (words[i].length <= 3){
+            Result.push ("short")
+        }
+        else if ( words[i].length >= 4 && words[i].length <= 7){
+              Result.push ("medium")
+        }
+        else {
+            Result.push ("long")
+        }
+    }
+
+    document.write(Result);
+</script>
+
+<script>
+    let nums = [3, 12, 25, 7, 40, 18, 9, 55, 22];
+    let Result = [ ];
+    for (let i = 0; i < nums.length; i++){
+        if (nums[i] < 10) {
+            Result.push ("small")
+        }
+        else if ( nums[i] >= 10 && nums[i] <= 30){
+              Result.push ("medium")
+        }
+        else {
+            Result.push ("large")
+        }
+    }
+
+    document.write(Result);
+
+</script>
+
+<script>
+    let person = {
+  name: "Riya",
+  age: 24,
+  city: "Kolkata"
+};
+
+document.write(person.name + "<br>" + person.city );
+
+
+</script>
+
+<script>
+    let user = {
+  name: "Amit",
+  age: 17,
+  city: "Delhi"
+};
+
+if (user.age >= 18){
+    document.write(user.name + " is an adult");
+} else {
+   document.write(user.name + " is Teenager"); 
+}
+</script>
+
+<script>
+    let student = {
+  name: "Riya",
+  marks: 72
+};
+if (student.marks >= 50){
+    document.write(student.name + " is Passed");
+} else {
+   document.write(student.name + " is Failed"); 
+}
+</script>
+
+<script>
+    let employees = [
+  { name: "Riya", salary: 55000 },
+  { name: "Amit", salary: 30000 },
+  { name: "Sneha", salary: 45000 },
+  { name: "Arjun", salary: 25000 }
+];
+for (let i = 0; i < employees.length; i++) {
+    if (employees[i].salary > 40000) {
+        document.write(employees[i].name + "<br>");
+    }
+}
+</script>
+
+<script>
+    let products = [
+  { name: "Pen", price: 20 },
+  { name: "Notebook", price: 120 },
+  { name: "Pencil", price: 10 },
+  { name: "Bag", price: 750 },
+  { name: "Eraser", price: 5 }
+];
+
+for (let i = 0; i < products.length; i++){
+    if (products[i].price < 100){
+        document.write(products[i].name + "<br>");
+    }
+}
+</script>
+
+<script>
+let students = [
+  { name: "Riya", marks: 85 },
+  { name: "Amit", marks: 42 },
+  { name: "Sneha", marks: 77 },
+  { name: "Arjun", marks: 90 },
+  { name: "Rahul", marks: 33 }
+];
+let passCount = 0;
+for (let i = 0; i < students.length; i++){
+    if (students[i].marks >= 50){
+       passCount++;
+    }
+}
+document.write (passCount);
+</script>
+
+<script>
+    let students = [
+  { name: "Riya", marks: 85 },
+  { name: "Amit", marks: 42 },
+  { name: "Sneha", marks: 77 },
+  { name: "Arjun", marks: 90 },
+  { name: "Rahul", marks: 33 }
+];
+let Highest = students [0];
+for (let i = 0; i < students.length; i++){
+    if (students[i].marks > Highest.marks){
+       Highest = students[i]
+    }
+}
+document.write (Highest.name);
+
+</script>
+
+
+
+<script>
+let products = [
+  { name: "Pen", price: 20 },
+  { name: "Notebook", price: 120 },
+  { name: "Pencil", price: 10 },
+  { name: "Bag", price: 750 },
+  { name: "Eraser", price: 5 }
+];
+let Lowest = products [0];
+for (let i = 0; i < products.length; i++){
+    if (products[i].price < Lowest.price){
+       Lowest = products[i]
+    }
+}
+document.write (Lowest.name);
+</script>
+
+<script>
+    let students = [
+  { name: "Riya", marks: 85 },
+  { name: "Amit", marks: 42 },
+  { name: "Sneha", marks: 77 },
+  { name: "Arjun", marks: 90 },
+  { name: "Rahul", marks: 33 }
+];
+
+
+for (let i = 0; i < students.length; i++){
+    if (students[i].marks < 50){
+       document.write (students[i].name + "<br>");
+    }
+}
+
+
+</script>-->
+
+<!--<script>
+    let students = [
+  { name: "Riya", marks: 85 },
+  { name: "Amit", marks: 42 },
+  { name: "Sneha", marks: 77 },
+  { name: "Arjun", marks: 90 },
+  { name: "Rahul", marks: 33 }
+];
+let total = 0;
+
+for (let i = 0; i < students.length; i++){
+    total += students[i].marks;
+
+}
+let avg = total / students.length;
+document.write(avg);
+
+
+</script>
+
+<script>
+  let nums = [3, 12, 25, 7, 40, 18, 9, 55, 22];
+
+  nums.forEach(function(num) {
+    document.write(num + "<br>");
+  });
+</script>
+
+<script>
+  let nums = [3, 12, 25, 7, 40, 18, 9, 55, 22];
+
+  for (let i = 0; i < nums.length; i++) {
+    document.write(nums[i] + "<br>");
+  }
+</script>
+
+<script>
+    let names = ["apple", "sky", "orange", "rhythm", "cat", "elephant", "moon"];
+    names.forEach(function (name) {
+        document.writeln(name + "<br>");
+    })
+</script>-->
+ 
+
+<!--<script>
+  let students = [
+    { name: "Riya", marks: 85 },
+    { name: "Amit", marks: 42 },
+    { name: "Sneha", marks: 77 },
+    { name: "Arjun", marks: 90 },
+    { name: "Rahul", marks: 33 }
+  ];
+
+  let passCount = 0;
+  let failCount = 0;
+  let totalMarks = 0;
+
+  students.forEach(function (student) {
+    totalMarks += student.marks;
+
+    if (student.marks >= 40) {
+      document.write(student.name + " : pass<br>");
+      passCount++;
+    } else {
+      document.write(student.name + " : fail<br>");
+      failCount++;
+    }
+  });
+
+  let average = totalMarks / students.length;
+
+  document.write("Passed students: " + passCount + "<br>");
+  document.write("Failed students: " + failCount + "<br>");
+  document.write("Average Marks: " + average);
+</script>-->
+
+
+<!--<script>
+  function addDigits(num) {
+    while (num >= 10) {
+      let sum = 0;
+
+      while (num > 0) {
+        sum += num % 10;
+        num = Math.floor(num / 10);
+      }
+
+      num = sum;
+    }
+    return num;
+  }
+
+  document.write(addDigits(38));
+</script>-->
+
+<script>
+    function reverseDigits(num) {
+        
+    }
+</script>
+
+
+
+</body>
+</html>
